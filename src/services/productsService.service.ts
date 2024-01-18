@@ -10,8 +10,7 @@ const addProduct = async ({ name, price, orderId }: ProductInputtableTypes)
     orderId,
   });
   
-  console.log('PRODUCT SERVICEEEE', newProduct);
-  return { status: 'SUCCESS', data: newProduct.dataValues };
+  return { status: 'CREATED', data: newProduct.dataValues };
 };
 
 export default {
