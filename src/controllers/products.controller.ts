@@ -7,6 +7,10 @@ const addProduct = async (req: Request, res: Response): Promise<Response> => {
   const { name, price, orderId } = req.body;
       
   const serviceResponse = await productsService.addProduct({ id, name, price, orderId });
+
+  if (serviceResponse.status !== 'SUCCESS') {
+    return res.status(mapStatusHTTP(serviceResponse.status)).json(serviceResponse.data);
+  }
   
   return res.status(mapStatusHTTP(serviceResponse.status)).json(serviceResponse.data);
 };

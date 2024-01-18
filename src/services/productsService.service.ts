@@ -10,6 +10,7 @@ const addProduct = async ({ name, price, orderId }: ProductInputtableTypes)
     orderId,
   });
   
+  console.log('RETURN DE DATA', newProduct.dataValues);
   return { status: 'CREATED', data: newProduct.dataValues };
 };
 
