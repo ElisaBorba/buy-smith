@@ -4,9 +4,9 @@ const productBody = {
     "orderId": 4
 }
 
-const newProductKeys = ['id', 'name', 'price', 'orderId']
+const productKeys = ['id', 'name', 'price', 'orderId']
 
 export default {
     productBody,
-    newProductKeys,
+    productKeys,
 };

@@ -10,10 +10,19 @@ const addProduct = async ({ name, price, orderId }: ProductInputtableTypes)
     orderId,
   });
   
-  console.log('RETURN DE DATA', newProduct.dataValues);
   return { status: 'CREATED', data: newProduct.dataValues };
+};
+
+const getProducts = async ()
+: Promise<ServiceResponse<Product[]>> => {
+  const products = await ProductModel.findAll();
+  const productsData = products.map((product) => product.dataValues);
+  console.log('LISTAAAAAAAA', productsData);
+  
+  return { status: 'SUCCESS', data: productsData };
 };
 
 export default {
   addProduct,
+  getProducts,
 };
