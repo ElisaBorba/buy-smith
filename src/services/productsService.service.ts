@@ -16,9 +16,11 @@ const addProduct = async ({ name, price, orderId }: ProductInputtableTypes)
 const getProducts = async ()
 : Promise<ServiceResponse<Product[]>> => {
   const products = await ProductModel.findAll();
+
+  console.log('PRODUCTS', products);
+
   const productsData = products.map((product) => product.dataValues);
-  console.log('LISTAAAAAAAA', productsData);
-  
+
   return { status: 'SUCCESS', data: productsData };
 };
 

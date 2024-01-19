@@ -1,3 +1,9 @@
 import productsRoutes from './products.route';
+// import ordersRoutes from './orders.route';
 
-export default productsRoutes;
+const routes = {
+  productsRoutes,
+  // ordersRoutes,
+};  
+
+export default routes;

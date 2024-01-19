@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
-import productsService from '../services';
+import services from '../services';
 import mapStatusHTTP from '../utils/mapStatusHTTP';
+
+const { productsService } = services;
 
 const addProduct = async (req: Request, res: Response): Promise<Response> => {
   const id = Number(req.params.id);

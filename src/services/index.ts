@@ -1,3 +1,9 @@
 import productsService from './productsService.service';
+// import ordersService from './ordersService.service';
 
-export default productsService;
+const services = {
+  productsService,
+  // ordersService,
+};
+
+export default services;

@@ -1,9 +1,12 @@
 import { Router } from 'express';
-import productsController from '../controllers';
+import controllers from '../controllers';
+import middlewares from '../middlewares/validateProducts';
 
+const { productsController } = controllers;
+const { validateName, validatePrice } = middlewares;
 const productsRoutes = Router();
 
-productsRoutes.post('/', productsController.addProduct);
+productsRoutes.post('/', validateName, validatePrice, productsController.addProduct);
 productsRoutes.get('/', productsController.getProducts);
 
 export default productsRoutes;
