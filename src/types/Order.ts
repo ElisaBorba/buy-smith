@@ -6,8 +6,14 @@ export type Order = {
   productId?: number | undefined;
 };
 
-export type OrderResponse = {
+export type OrderWithProduct = {
   id: number;
   userId: number;
   productIds: Product[];
+};
+
+export type OrderResponse = {
+  id: number;
+  userId: number;
+  productIds: number[];
 };
