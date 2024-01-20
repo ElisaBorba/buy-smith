@@ -5,3 +5,12 @@ export type User = {
   level: number;
   password: string;
 };
+
+export type Token = { token: string };
+
+export type LoginType = { username: string, password: string };
+
+export type TokenPayload = {
+  id: number,
+  username: string,
+};
