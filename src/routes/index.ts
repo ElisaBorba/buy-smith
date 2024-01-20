@@ -1,9 +1,9 @@
 import productsRoutes from './products.route';
-// import ordersRoutes from './orders.route';
+import ordersRoutes from './orders.route';
 
 const routes = {
   productsRoutes,
-  // ordersRoutes,
+  ordersRoutes,
 };  
 
 export default routes;

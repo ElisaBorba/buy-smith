@@ -1,9 +1,9 @@
 import productsController from './products.controller';
-// import ordersController from './orders.controller';
+import ordersController from './orders.controller';
 
 const controllers = {
   productsController,
-  // ordersController,
+  ordersController,
 };
 
 export default controllers;
