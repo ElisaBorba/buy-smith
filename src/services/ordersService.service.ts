@@ -22,8 +22,6 @@ const getOrders = async ()
       productIds,
     };
   });
-  
-  console.log('TENTANDO TIPAR', orderReturn);
 
   return { status: 'SUCCESS', data: orderReturn };
 };

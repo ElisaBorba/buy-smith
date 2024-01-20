@@ -7,8 +7,6 @@ import productsMock from '../../mocks/products.mock'
 import productService from '../../../src/services/productsService.service';
 import { ServiceResponse } from '../../../src/types/ServiceResponse'
 import { Product } from '../../../src/types/Product'
-import Sinon from 'sinon';
-import productsServiceService from '../../../src/services/productsService.service';
 
 const { productsController } = controllers;
 
