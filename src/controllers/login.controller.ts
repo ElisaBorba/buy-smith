@@ -7,10 +7,10 @@ const { loginService } = services;
 const login = async (req: Request, res: Response) => {
   const serviceResponse = await loginService.loginAccess(req.body);
 
-  console.log('LOGINNNNN', serviceResponse);
-
   if (serviceResponse.status !== 'SUCCESS') {
-    return res.status(mapStatusHTTP(serviceResponse.status)).json(serviceResponse.data);  
+    return res
+      .status(mapStatusHTTP(serviceResponse.status))
+      .json(serviceResponse.data);
   }
   res.status(200).json(serviceResponse.data);
 };
